@@ -23,6 +23,12 @@ Library\Bee\artifacts\mvdfrm\Unity.InternalAPIEditorBridge.001.ref.dll_C275F416F
 Library\Bee\artifacts\mvdfrm\Unity.InternalAPIEngineBridge.001.ref.dll_B4F0ACC15A996E43.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.Editor.ref.dll_9A20CFD48BC11F43.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.ref.dll_E8EFDB1B8D5C174E.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Components.ref.dll_CE1998A1A8BAFA58.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Editor.PackageChecker.ref.dll_309C58284DD699E4.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Editor.ref.dll_5B6B06A4AA08C33F.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Runtime.ref.dll_DC22D56636C4177C.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Networking.Editor.ref.dll_96C11E09CCB711BF.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Networking.Transport.ref.dll_EFD27BE74CCF752D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_257AEB342BE77856.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_9B5591808ABA37AF.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.Editor.ref.dll_159E061D77A10B86.mvfrm
