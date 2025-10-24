@@ -4,20 +4,36 @@ using UnityEngine;
 public class SettingsSyncSpawner : MonoBehaviour
 {
     [SerializeField] private SettingsSync settingsPrefab;
-    public static SettingsSync Instance { get; private set; }
+    public static SettingsSyncSpawner Instance { get; private set; }
 
-    void Awake() => DontDestroyOnLoad(gameObject);
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void EnsureSpawned()
     {
-        if (Instance != null) return;
+        if (!NetworkManager.Singleton || (!NetworkManager.Singleton.IsHost && !NetworkManager.Singleton.IsServer))
+            return;
 
-        if (NetworkManager.Singleton.IsServer || NetworkManager.Singleton.IsHost)
+        if (settingsPrefab == null)
         {
-            var go = Instantiate(settingsPrefab);
-            var netObj = go.GetComponent<NetworkObject>();
-            netObj.Spawn();
-            Instance = go.GetComponent<SettingsSync>();
+            Debug.LogError("SettingsSyncSpawner: settingsPrefab not assigned!");
+            return;
         }
+
+        var existing = FindObjectOfType<SettingsSync>();
+        if (existing != null) return;
+
+        var go = Instantiate(settingsPrefab.gameObject);
+        var netObj = go.GetComponent<NetworkObject>();
+        netObj.Spawn();
+        Debug.Log("SettingsSync spawned on host.");
     }
 }
