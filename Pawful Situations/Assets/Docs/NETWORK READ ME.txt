@@ -1,0 +1,14 @@
+Host & Joiner
+- Allow firewall for the unity editor & build client
+
+Host:
+- Click on the NetworkRoot gameobject, and double check that "Allow remote Connections?" is set to true.
+- TEMPORARY: in ConnectionUI, make sure that all IP strings are set to the default host, 127.0.0.1
+
+Joiner:
+- Click on the NetworkRoot gameobject, and double check that "Allow remote Connections?" is set to true.
+- Go to the ConnectionUI.cs script and set the IP's strings to be the host IP.
+	- if you are lost, enter in the cmd "ipconfig" and look for the wifi IPv4 address
+	- if you are on ethernet, look for the ethernet IPv4 address
+
+Joining only works if you have it enabled on the firewall.

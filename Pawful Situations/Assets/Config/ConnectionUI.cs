@@ -19,28 +19,22 @@ public class ConnectionUI : MonoBehaviour
     public void OnClickHost()
     {
         var nm = NetworkManager.Singleton;
-        if (nm == null)
-        {
-            Debug.LogError("No NetworkManager (Bootstrap must load first).");
-            return;
-        }
+        if (nm == null) { Debug.LogError("No NetworkManager."); return; }
 
-        // Start the host
-        bool ok = nm.StartHost();
-        if (!ok)
+        var transport = nm.GetComponent<UnityTransport>();
+        // Force server to listen on all interfaces, port 7777
+        // Overload: SetConnectionData(clientAddress, port, listenAddress)
+        transport.SetConnectionData("127.0.0.1", 7777, "0.0.0.0");
+
+        if (!nm.StartHost())
         {
             Debug.LogError("StartHost() failed.");
             return;
         }
 
-        // Spawn SettingsSync network object (this is the replicated settings data)
         SettingsSyncSpawner.Instance?.EnsureSpawned();
-
-        // Refresh the lobby UI now that we are host (enables sliders/toggles)
         FindObjectOfType<LobbySettingsBinder>(true)?.ForceRefreshNow();
-
-        // Optional: feedback
-        Debug.Log("Hosting. You can adjust settings; clients will see them.");
+        Debug.Log("Hosting...");
     }
 
 
