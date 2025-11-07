@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12bb42854c7dced4db8da8e6a17599e8, type: 3}
   m_Name: TEST_DECK_002
   m_EditorClassIdentifier: 
-  displayName: TEST_DECK_02
+  displayName: Demo
   description: 67 67 67 67 67
   icon: {fileID: 21300000, guid: 8abd8cb1dae66cd47b2b4c646cd39bf2, type: 3}
   bank: {fileID: 11400000, guid: fc20fe99b838dd541b6ad3f608f382f3, type: 2}
