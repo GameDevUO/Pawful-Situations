@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc23b76b2a215d408e69e09dfae499c, type: 3}
+  m_Name: ABS_MATH_001
+  m_EditorClassIdentifier: 
+  questions:
+  - id: Tommy
+    prompt: Tommy has 54 pizza slices. He wants to share it among his friends. Tommy
+      has no friends. How many slices of pizza do Tommy's friends get?
+    choices:
+    - Tommy can't eat no more pizza
+    - You can't divide by 0 you sick fuck.
+    - Assume he's friends with himself.
+    - Phone a friend.
+    correctIndex: 1
+  - id: Apple Jack
+    prompt: Jack has 12 apples. Jack's ex takes 7, his friend takes 4, and one rolls
+      under the fridge. How many apples do you have left and how much emotional baggage?
+    choices:
+    - 1 apple, infinite baggage
+    - Send good ol' daisy the dog to fetch the apple.
+    - Should have done a prenup.
+    - -1 apple
+    correctIndex: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc23b76b2a215d408e69e09dfae499c, type: 3}
+  m_Name: TEST_QUESTION_002
+  m_EditorClassIdentifier: 
+  questions:
+  - id: TEST_001
+    prompt: Best soda?
+    choices:
+    - Coke
+    - Pepsi
+    - Dr. Pepper
+    - Carbonation
+    correctIndex: 2
